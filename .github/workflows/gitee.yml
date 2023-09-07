@@ -12,7 +12,7 @@ jobs:
             - name: Mirror a repository using SSH
               uses: wearerequired/git-mirror-action@v1.2.0
               env:
-                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+                  SSH_PRIVATE_KEY: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
               with:
                   source-repo: "git@github.com:sakurastone/egg-example.git"
                   destination-repo: "git@gitee.com:sakurastone/egg-example.git"
