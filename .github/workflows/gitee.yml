@@ -9,7 +9,8 @@ jobs:
     git-mirror:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - name: Mirror a repository using SSH
+              uses: wearerequired/git-mirror-action@v1.2.0
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
               with:
