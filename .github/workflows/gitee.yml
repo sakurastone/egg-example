@@ -9,7 +9,10 @@ jobs:
     git-mirror:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
+            - name: Checkout source codes
+              uses: actions/checkout@v1
+            - name: Mirror Github to Gitee with white list
+              uses: wearerequired/git-mirror-action@v1
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
               with:
